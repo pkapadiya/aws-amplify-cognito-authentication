@@ -1,0 +1,17 @@
+1. AWS S3 
+	1. Create Bucket name will be without (-) and all in small
+		1. folders
+			1. raw			
+			2. parquet	
+2. AWS Glue
+	1. Create Database
+		Name: ?
+	2. Glue Service Role
+		check configuration from below ARN
+		arn:aws:iam::882532848008:role/service-role/AWSGlueServiceRole-pk-cdr-test-role
+	3. Create "raw" table with below configuration.
+	   1. attached table definition "raw"
+	4. Create parquet table with below configuration.
+	   2. attached table definition "parquet"
+	5. Create glue jobs with attached "cdr-glue-parquet-generator.py", for configuration you can refer on "pk-cdr-job" job .
+	   1. glue-->jobs-->pk-cdr-job
